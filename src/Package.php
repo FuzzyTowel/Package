@@ -172,7 +172,7 @@ class Package
 
         // if there wasn't an actual fallback set
         if (func_num_args() !== 2) {
-            return Util::dottedConfig($this->json_config, $section, new Void);
+            return Util::dottedConfig($this->json_config, $section, new FoolVoid);
         }
 
         return Util::dottedConfig($this->json_config, $section, $fallback);
@@ -215,7 +215,7 @@ class Package
 
         // if there wasn't an actual fallback set
         if (func_num_args() !== 2) {
-            return Util::dottedConfig($this->config, $section, new Void);
+            return Util::dottedConfig($this->config, $section, new FoolVoid);
         }
 
         return Util::dottedConfig($this->config, $section, $fallback);

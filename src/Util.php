@@ -21,7 +21,7 @@ class Util
      * @param   string  $section   The dotted keys: akey.anotherkey.key
      * @param   mixed   $fallback  The fallback value
      * @return  mixed
-     * @throws  \DomainException  if the fallback is \Foolz\Package\Void
+     * @throws  \DomainException  if the fallback is \Foolz\Package\FoolVoid
      */
     public static function dottedConfig($config, $section, $fallback)
     {
@@ -33,7 +33,7 @@ class Util
             if (isset($current[$key])) {
                 $current = $current[$key];
             } else {
-                if ($fallback instanceof Void) {
+                if ($fallback instanceof FoolVoid) {
                     throw new \DomainException;
                 }
 
